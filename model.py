@@ -18,11 +18,13 @@ from keras.layers import SimpleRNN, Dense, SimpleRNN, LSTM
 n_lags = 3
 
 df = pd.read_csv('adapted_weather_dataset.csv')
+df1 = pd.read_csv('updated_weather_dataset_with_energy.csv')
 
 if st.checkbox('Show dataframe Head'):
     chart_data = df.head()
+    x = df1.head()
 
-    chart_data
+    chart_data, x
 
 if st.checkbox('Show dataframe Columns'):
     chart_data = df.columns
