@@ -22,19 +22,21 @@ df1 = pd.read_csv('updated_weather_dataset_with_energy.csv')
 
 if st.checkbox('Show dataframe Head'):
     chart_data = df.head()
-    x = df1.head()
+    x = df1.head(11)
 
     chart_data, x
 
 if st.checkbox('Show dataframe Columns'):
     chart_data = df.columns
+    x = df1.columns
 
-    chart_data
+    chart_data, x
 
 if st.checkbox('Show dataframe info'):
     chart_data = df.describe()
+    x = df1.describe()
 
-    chart_data
+    chart_data, x
 
 # Add a selectbox to the sidebar:
 add_selectbox = st.sidebar.selectbox(
